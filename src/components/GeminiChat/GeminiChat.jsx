@@ -22,7 +22,7 @@ const GeminiChat = () => {
 
   const runChat = async (userMessage) => {
     try {
-      /* --- ATUALIZADO PARA O MODELO FLASH (Mais rápido e sem erro 404) --- */
+      /* --- ATUALIZADO PARA O MODELO FLASH (Mais rápido) --- */
       const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
       /* --- PROMPT INTELIGENTE (POLIGLOTA) --- */

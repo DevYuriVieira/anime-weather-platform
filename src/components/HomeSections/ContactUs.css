@@ -47,6 +47,8 @@
   font-size: 1rem;
   background-color: #f8f9fa;
   transition: all 0.3s;
+  color: #333333;
+  font-family: sans-serif;
 }
 
 .input-wrap input:focus, 

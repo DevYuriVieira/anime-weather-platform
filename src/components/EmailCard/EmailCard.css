@@ -1,6 +1,6 @@
 .login-card {
   /* Visual de Vidro */
-  background: rgba(255, 255, 255, 0.4); /* Aumentei um pouco a opacidade pra leitura */
+  background: rgba(255, 255, 255, 0.4); 
   backdrop-filter: blur(10px);
   
   /* Tamanho e Espaçamento */
@@ -45,8 +45,6 @@
   font-size: 1rem;
   outline: none;
   background: #ffffff; /* Fundo Branco */
-  
-  /* O SEGREDO: Forçar a cor do texto para cinza escuro */
   color: #333333 !important; 
   
   transition: border-color 0.3s;
@@ -65,7 +63,7 @@
   
   /* Centraliza o bloco do checkbox no card */
   display: flex;
-  justify-content: flex-start; /* ou center, se preferir centralizado */
+  justify-content: flex-start; 
   padding-left: 5px;
 }
 
