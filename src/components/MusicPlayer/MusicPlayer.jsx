@@ -46,7 +46,7 @@ const MusicPlayer = () => {
       <audio ref={audioRef} src={rainSound} loop />
 
       {/* O Botão Amarelo */}
-      <button className="player-btn" onClick={togglePlay} title="Rain Sounds">
+      <button className="player-btn" onClick={togglePlay} aria-label={isPlaying ? "Pause Music" : "Play Music"}>
         {isPlaying ? <FaPause /> : <FaPlay />}
       </button>
     </div>

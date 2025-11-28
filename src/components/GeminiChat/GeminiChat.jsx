@@ -77,7 +77,7 @@ const GeminiChat = () => {
   return (
     <div className="gemini-chat-wrapper">
       {!isOpen && (
-        <button className="chat-toggle-btn" onClick={() => setIsOpen(true)}>
+        <button className="chat-toggle-btn" onClick={() => setIsOpen(true)} aria-label="Open Chat with Weather Otaku">
           <FaCloudSun size={28} />
         </button>
       )}
