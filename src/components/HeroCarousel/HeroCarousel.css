@@ -1,0 +1,59 @@
+/* Container Principal */
+.hero-carousel-container {
+  width: 100%;
+  height: 90vh; /* Altura da tela menos a navbar */
+  position: relative; /* Pai relativo pro filho absoluto */
+  background-color: #000;
+}
+
+/* Força o carrossel a ocupar toda a altura */
+.hero-carousel-container .carousel-root,
+.hero-carousel-container .carousel,
+.hero-carousel-container .carousel .slider-wrapper,
+.hero-carousel-container .carousel .slider {
+  height: 100%;
+}
+
+/* Estilo da Imagem de Fundo */
+.slide-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slide-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cobre tudo sem distorcer */
+  filter: brightness(0.6); /* Escurece pra destacar o login */
+}
+
+/* --- O NOVO CONTAINER FIXO --- */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; /* Fica acima das imagens */
+  
+  /* Centralização Perfeita */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Permite clicar nas setas laterais do carrossel se o mouse não estiver no card */
+  pointer-events: none; 
+}
+
+/* Reativa os cliques no card (filho do overlay) */
+.hero-overlay > * {
+  pointer-events: auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-carousel-container {
+    height: 100vh;
+  }
+}

@@ -1,0 +1,43 @@
+/* --- VARIÁVEIS GLOBAIS --- */
+:root {
+  --primary-color: #00a8ff;  /* Azul Céu */
+  --secondary-color: #0097e6; /* Azul mais escuro */
+  --accent-color: #fbc531;    /* Amarelo Sol */
+  --text-color: #2f3640;      /* Cinza Chumbo (Texto Padrão) */
+  --bg-light: #f5f6fa;        /* Fundo claro genérico */
+  --white: #ffffff;
+}
+
+/* --- RESET BÁSICO (Limpa a sujeira do navegador) --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding não estoure o tamanho */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--white);
+  color: var(--text-color);
+  overflow-x: hidden; /* Evita rolagem lateral indesejada */
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+}

@@ -1,0 +1,85 @@
+.contact-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.contact-container {
+  max-width: 800px; 
+  margin: 0 auto;
+}
+
+.contact-subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrap label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.input-wrap input, 
+.input-wrap textarea {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f8f9fa;
+  transition: all 0.3s;
+}
+
+.input-wrap input:focus, 
+.input-wrap textarea:focus {
+  border-color: #00a8ff;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.1);
+}
+
+.btn-send {
+  padding: 15px 30px;
+  background-color: #fbc531; 
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  align-self: center; 
+}
+
+.btn-send:hover {
+  background-color: #00a8ff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  .btn-send {
+    width: 100%;
+  }
+}

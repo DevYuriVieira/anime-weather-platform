@@ -1,0 +1,147 @@
+.login-card {
+  /* Visual de Vidro */
+  background: rgba(255, 255, 255, 0.4); /* Aumentei um pouco a opacidade pra leitura */
+  backdrop-filter: blur(10px);
+  
+  /* Tamanho e Espaçamento */
+  padding: 2.5rem;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  
+  /* Sombras e Bordas */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  
+  /* Garante que o texto geral do card seja escuro */
+  color: #333; 
+}
+
+.login-card h2 {
+  color: #1a1a2e; 
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.login-card p {
+  color: #4a4a5e;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* --- CORREÇÃO 1: INPUTS (Texto Invisível) --- */
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: #ffffff; /* Fundo Branco */
+  
+  /* O SEGREDO: Forçar a cor do texto para cinza escuro */
+  color: #333333 !important; 
+  
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #00a8ff; 
+}
+
+/* --- CORREÇÃO 2: CHECKBOX DESALINHADO --- */
+.checkbox-group {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #4a4a5e;
+  margin-bottom: 5px;
+  
+  /* Centraliza o bloco do checkbox no card */
+  display: flex;
+  justify-content: flex-start; /* ou center, se preferir centralizado */
+  padding-left: 5px;
+}
+
+.checkbox-group label {
+  /* Alinha o quadradinho com o texto perfeitamente */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaço entre o quadrado e a palavra */
+  cursor: pointer;
+}
+
+.checkbox-group input {
+  /* Aumenta um pouquinho o quadrado pra ficar mais clicável */
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin: 0; /* Remove margens padrão bugadas */
+}
+
+/* Mensagem de Erro */
+.error-msg {
+  color: #ff4757;
+  font-weight: bold;
+  font-size: 0.9rem;
+  background: rgba(255, 71, 87, 0.1);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* Botões */
+.btn-login {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fbc531;
+  color: #2f3640;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-login:hover {
+  background-color: #e1b12c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.divider {
+  font-size: 0.85rem;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.divider::before, .divider::after {
+  content: "";
+  height: 1px;
+  background: #ccc;
+  flex: 1;
+}
+
+.btn-signup {
+  padding: 12px;
+  border: 2px solid #00a8ff;
+  background: transparent;
+  color: #00a8ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-signup:hover {
+  background: #00a8ff;
+  color: white;
+}

@@ -1,0 +1,136 @@
+:root {
+  /* Minhas cores do tema */
+  --primary-color: #00a8ff; /* Azul céu vibrante */
+  --accent-color: #fbc531;  /* Amarelo sol pro botão */
+  --text-color: #ffffff;    /* Branco nuvem pro texto */
+  --dark-text: #2f3640;     /* Cinza escuro pra ler dentro do amarelo */
+}
+
+/* Configuração geral da barra */
+.navbar {
+  /* Degradê pra dar aquele visual de céu */
+  background: linear-gradient(90deg, #00a8ff 0%, #0097e6 100%);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  position: sticky; /* Cola a barra no topo ao rolar */
+  top: 0;
+  z-index: 999; /* Fica por cima de tudo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* A logo é controlada no JSX, aqui é só posicionamento */
+.navbar-logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Lista dos links (Desktop) */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+/* Estilo dos links normais (Home, About) */
+.nav-links {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* Efeito ao passar o mouse nos links */
+.nav-links:hover {
+  color: var(--accent-color); /* Fica amarelo */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* --- O BOTÃO DE DESTAQUE (Contact Us) --- */
+.nav-links-btn {
+  background-color: var(--accent-color); /* Fundo Amarelo */
+  color: var(--dark-text); /* Texto escuro pra dar leitura */
+  padding: 10px 24px;
+  border-radius: 50px; /* Bem redondo */
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-links-btn:hover {
+  background-color: #e1b12c; /* Amarelo um pouco mais fechado */
+  transform: translateY(-2px); /* Efeito de flutuar */
+}
+
+/* Ícone do menu (Hambúrguer) - Escondido no PC */
+.menu-icon {
+  display: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* --- VERSÃO MOBILE E TABLET --- */
+@media screen and (max-width: 960px) {
+  .menu-icon {
+    display: block; /* Aparece só no celular */
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px; /* Logo abaixo da barra */
+    left: -100%; /* Começa escondido na esquerda */
+    opacity: 0;
+    transition: all 0.5s ease;
+    background: var(--primary-color); /* Mantém o fundo azul */
+    padding-bottom: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* Classe que entra quando clica no menu */
+  .nav-menu.active {
+    left: 0; /* Traz o menu pra tela */
+    opacity: 1;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .nav-links {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  /* Ajuste do botão Contact Us no celular */
+  .nav-links-btn {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 14px;
+  }
+}

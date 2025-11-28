@@ -1,0 +1,215 @@
+/* --- FORÇAR A ESPADA EM TUDO --- */
+/* Isso garante que ela não suma quando passar por cima de botões ou selects */
+.signup-page,
+.signup-page input,
+.signup-page select,
+.signup-page button,
+.signup-page a,
+.signup-page label {
+  /* O caminho da imagem pequena (32x32) */
+  cursor: url('../assets/images/sword-cursor.png'), auto !important;
+}
+
+/* Container da Página inteira */
+.signup-page {
+  /* Wallpaper da cidade anime à noite */
+  background: url('../assets/images/anime-bg.png') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* (Removi o cursor daqui pq já coloquei na regra geral lá em cima) */
+}
+
+/* Película escura pro card brilhar em cima */
+.signup-page::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Escurece 60% */
+  z-index: 1;
+  pointer-events: none; /* Deixa o clique passar pela sombra */
+}
+
+/* O Card - Estilo Cyberpunk Neon */
+.signup-card {
+  position: relative;
+  z-index: 2;
+  
+  /* Vidro escuro */
+  background: rgba(20, 20, 35, 0.95); 
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 650px;
+  text-align: center;
+
+  /* --- O EFEITO NEON AZUL NAS BORDAS --- */
+  border: 2px solid #00a8ff;
+  box-shadow: 
+    0 0 5px #fff,             /* Núcleo branco */
+    0 0 10px #00a8ff,         /* Brilho primário */
+    0 0 20px rgba(0, 168, 255, 0.5), 
+    0 0 40px rgba(0, 168, 255, 0.3); /* Aura azul */
+  
+  transition: box-shadow 0.3s ease;
+}
+
+/* Cabeçalho */
+.card-header {
+  margin-bottom: 25px;
+}
+
+/* Logo brilhando (dentro do card) */
+.signup-logo {
+  height: 80px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+}
+
+.signup-card h2 {
+  color: #fff;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.signup-card p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Formulário e Inputs */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Dois inputs por linha */
+.form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  background-color: #0b0c10;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+  /* Importante: Remove setas padrão feias do navegador se quiser */
+  appearance: none; 
+}
+
+/* Foco no input acende o amarelo */
+input:focus, select:focus {
+  border-color: #fbc531; 
+  box-shadow: 0 0 8px rgba(251, 197, 49, 0.4);
+}
+
+/* --- BOTÃO REGISTER: O Pulo do Gato --- */
+.btn-register {
+  margin-top: 15px;
+  padding: 15px;
+  background: linear-gradient(90deg, #00a8ff 0%, #0097e6 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  
+  /* Importante: Herda a espada pro clique */
+  /* (Pode remover o 'cursor' daqui de dentro pq a regra lá do topo já cobre com !important) */
+  
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  
+  /* Transição elástica pra dar sensação de pulo */
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Épico */
+.btn-register:hover {
+  /* Pula pra cima e cresce */
+  transform: translateY(-4px) scale(1.03);
+  
+  /* Vira Amarelo */
+  background: #fbc531; 
+  color: #2f3640; 
+  
+  /* Estoura o Neon Amarelo */
+  box-shadow: 
+    0 0 5px #fbc531,
+    0 0 20px #fbc531,
+    0 0 40px rgba(251, 197, 49, 0.6);
+}
+
+/* --- MENSAGENS DE ERRO/SUCESSO --- */
+.message-box {
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.message-box.error {
+  background-color: rgba(255, 71, 87, 0.2);
+  border: 1px solid #ff4757;
+  color: #ff4757;
+  box-shadow: 0 0 10px rgba(255, 71, 87, 0.2);
+}
+
+.message-box.success {
+  background-color: rgba(46, 213, 115, 0.2);
+  border: 1px solid #2ed573;
+  color: #2ed573;
+  box-shadow: 0 0 10px rgba(46, 213, 115, 0.2);
+}
+
+/* --- LINK DE LOGIN --- */
+.login-link {
+  color: #888;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+/* A palavra clicável */
+.login-link span {
+  color: #00a8ff;
+  font-weight: bold;
+  text-decoration: underline;
+  display: inline-block; 
+  
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.login-link span:hover {
+  color: #fbc531;
+  text-decoration: none;
+  
+  /* Pula e brilha o texto */
+  transform: translateY(-3px) scale(1.1);
+  text-shadow: 0 0 8px rgba(251, 197, 49, 0.8);
+}
+
+/* Ajuste Mobile */
+@media (max-width: 600px) {
+  .form-group {
+    grid-template-columns: 1fr; 
+  }
+  
+  .signup-card {
+    padding: 1.5rem;
+    width: 95%;
+  }
+}
