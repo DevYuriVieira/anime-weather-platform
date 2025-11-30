@@ -1,4 +1,4 @@
-:root {
+:global(:root) {
   /* Minhas cores do tema */
   --primary-color: #00a8ff; /* Azul céu vibrante */
   --accent-color: #fbc531;  /* Amarelo sol pro botão */
@@ -8,20 +8,19 @@
 
 /* Configuração geral da barra */
 .navbar {
-  /* Degradê pra dar aquele visual de céu */
   background: linear-gradient(90deg, #00a8ff 0%, #0097e6 100%);
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
-  position: sticky; /* Cola a barra no topo ao rolar */
+  position: sticky;
   top: 0;
-  z-index: 999; /* Fica por cima de tudo */
+  z-index: 999;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-container {
+.navbarContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,14 +31,14 @@
 }
 
 /* A logo é controlada no JSX, aqui é só posicionamento */
-.navbar-logo {
+.navbarLogo {
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 
 /* Lista dos links (Desktop) */
-.nav-menu {
+.navMenu {
   display: flex;
   align-items: center;
   list-style: none;
@@ -47,7 +46,7 @@
 }
 
 /* Estilo dos links normais (Home, About) */
-.nav-links {
+.navLinks {
   color: var(--text-color);
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -56,77 +55,81 @@
 }
 
 /* Efeito ao passar o mouse nos links */
-.nav-links:hover {
-  color: var(--accent-color); /* Fica amarelo */
+.navLinks:hover {
+  color: var(--accent-color);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
 }
 
-/* --- O BOTÃO DE DESTAQUE (Contact Us) --- */
-.nav-links-btn {
-  background-color: var(--accent-color); /* Fundo Amarelo */
-  color: var(--dark-text); /* Texto escuro pra dar leitura */
+/* Botão destaque (Contact Us) */
+.navLinksBtn {
+  background-color: var(--accent-color);
+  color: var(--dark-text);
   padding: 10px 24px;
-  border-radius: 50px; /* Bem redondo */
+  border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.nav-links-btn:hover {
-  background-color: #e1b12c; /* Amarelo um pouco mais fechado */
-  transform: translateY(-2px); /* Efeito de flutuar */
+.navLinksBtn:hover {
+  background-color: #e1b12c;
+  transform: translateY(-2px);
 }
 
 /* Ícone do menu (Hambúrguer) - Escondido no PC */
-.menu-icon {
+.menuIcon {
   display: none;
   color: #fff;
   font-size: 1.8rem;
   cursor: pointer;
 }
 
-/* --- VERSÃO MOBILE E TABLET --- */
+/* Ícone interno (o X / ☰) */
+.icon {
+  display: inline-block;
+}
+
+/* Versão mobile e tablet */
 @media screen and (max-width: 960px) {
-  .menu-icon {
-    display: block; /* Aparece só no celular */
+  .menuIcon {
+    display: block;
   }
 
-  .nav-menu {
+  .navMenu {
     display: flex;
     flex-direction: column;
     width: 100%;
     position: absolute;
-    top: 80px; /* Logo abaixo da barra */
-    left: -100%; /* Começa escondido na esquerda */
+    top: 80px;
+    left: -100%;
     opacity: 0;
     transition: all 0.5s ease;
-    background: var(--primary-color); /* Mantém o fundo azul */
+    background: var(--primary-color);
     padding-bottom: 30px;
     border-top: 1px solid rgba(255,255,255,0.1);
   }
 
   /* Classe que entra quando clica no menu */
-  .nav-menu.active {
-    left: 0; /* Traz o menu pra tela */
+  .active {
+    left: 0;
     opacity: 1;
   }
 
-  .nav-item {
+  .navItem {
     width: 100%;
     text-align: center;
     margin: 15px 0;
   }
 
-  .nav-links {
+  .navLinks {
     display: block;
     width: 100%;
     font-size: 1.2rem;
   }
 
-  /* Ajuste do botão Contact Us no celular */
-  .nav-links-btn {
+  .navLinksBtn {
     display: block;
     width: 80%;
     margin: 0 auto;
