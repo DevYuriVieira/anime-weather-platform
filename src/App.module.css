@@ -1,0 +1,25 @@
+.app {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NÃO USE EM CSS MODULES:
+img {}
+a {}
+Esses seletores precisam continuar globais,
+pois CSS Modules não aplica estilos em tags HTML globais.
+*/
+
+/* PARA MANTER GLOBAL DENTRO DO MODULE, USE :global */
+
+:global(img) {
+  max-width: 100%;
+  display: block;
+}
+
+:global(a) {
+  text-decoration: none;
+  color: inherit;
+}

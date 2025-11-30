@@ -14,7 +14,7 @@ import MusicPlayer from './components/MusicPlayer/MusicPlayer';
 import GeminiChat from './components/GeminiChat/GeminiChat';
 
 /* --- PÁGINAS --- */
-import Signup from './pages/Signup'; 
+import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard/Dashboard';
 
 import './App.css';
@@ -24,31 +24,31 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          
-          {/* ROTA HOME */}
+
+          {/* HOME */}
           <Route path="/" element={
             <>
               <Navbar />
               <HeroCarousel />
               <AboutUs />
               <ContactUs />
-              
+
               <MusicPlayer />
               <GeminiChat />
               <Footer />
             </>
           } />
 
-          {/* ROTA CADASTRO */}
+          {/* SIGNUP */}
           <Route path="/signup" element={<Signup />} />
 
-          {/* ROTA DASHBOARD */}
+          {/* DASHBOARD */}
           <Route path="/dashboard" element={
             <>
               <Navbar />
               <Dashboard />
-              <MusicPlayer /> 
-              <GeminiChat />  
+              <MusicPlayer />
+              <GeminiChat />
               <Footer />
             </>
           } />
