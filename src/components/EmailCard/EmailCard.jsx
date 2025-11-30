@@ -1,31 +1,24 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './EmailCard.css';
+import styles from './EmailCard.module.css';
 
 const EmailCard = () => {
   const navigate = useNavigate();
 
-  // Estados para capturar o que é digitado
   const [inputEmail, setInputEmail] = useState('');
   const [inputPassword, setInputPassword] = useState('');
-  
-  // Estado para mensagem de erro
   const [error, setError] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
-    
-    // --- LÓGICA DO LOGIN FICTÍCIO ---
-    // Aceita: admin/admin OU usuario/123456
+
     if (
       (inputEmail === 'admin' && inputPassword === 'admin') || 
       (inputEmail === 'usuario' && inputPassword === '123456')
     ) {
-      // Sucesso! Limpa erro e navega
       setError('');
       navigate('/dashboard');
     } else {
-      // Erro! Mostra mensagem
       setError('Invalid credentials! Try "admin" & "admin"');
     }
   };
@@ -35,19 +28,23 @@ const EmailCard = () => {
   };
 
   return (
-    <div className="login-card">
+    <div className={styles.loginCard}>
       <h2>Welcome Back!</h2>
       <p>Enter your details to access the best of Anime & Weather.</p>
       
-      <form className="login-form" onSubmit={handleLogin}>
+      <form className={styles.loginForm} onSubmit={handleLogin}>
         
-        {/* MENSAGEM DE ERRO (Só aparece se errar a senha) */}
-        {error && <div className="error-msg" style={{color: 'red', marginBottom: '10px', fontWeight: 'bold'}}>{error}</div>}
+        {/* MENSAGEM DE ERRO */}
+        {error && (
+          <div className={styles.errorMsg}>
+            {error}
+          </div>
+        )}
 
         {/* Campo de Login/Email */}
-        <div className="input-group">
+        <div className={styles.inputGroup}>
           <input 
-            type="text" // Mudei de 'email' pra 'text' pra aceitar só "admin" sem @
+            type="text"
             placeholder="User or Email" 
             required 
             value={inputEmail}
@@ -56,7 +53,7 @@ const EmailCard = () => {
         </div>
 
         {/* Campo de Senha */}
-        <div className="input-group">
+        <div className={styles.inputGroup}>
           <input 
             type="password" 
             placeholder="Password" 
@@ -66,21 +63,19 @@ const EmailCard = () => {
           />
         </div>
 
-        <div className="checkbox-group">
+        <div className={styles.checkboxGroup}>
           <label>
             <input type="checkbox" /> Keep me signed in
           </label>
         </div>
 
-        {/* Botão ENTRAR */}
-        <button type="submit" className="btn-login">
+        <button type="submit" className={styles.btnLogin}>
           Login
         </button>
 
-        <div className="divider">or</div>
+        <div className={styles.divider}>or</div>
 
-        {/* Botão CADASTRAR */}
-        <button type="button" className="btn-signup" onClick={handleSignUp}>
+        <button type="button" className={styles.btnSignup} onClick={handleSignUp}>
           Sign Up
         </button>
 
