@@ -1,6 +1,6 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel';
-import './HeroCarousel.css';
+import styles from './HeroCarousel.module.css';
 import EmailCard from '../EmailCard/EmailCard';
 
 /* Importando as imagens */
@@ -12,7 +12,7 @@ const HeroCarousel = () => {
   const slides = [img1, img2, img3];
 
   return (
-    <div className="hero-carousel-container">
+    <div className={styles.heroCarouselContainer}>
       
       {/* 1. O Carrossel (Apenas as imagens girando) */}
       <Carousel
@@ -21,20 +21,20 @@ const HeroCarousel = () => {
         showThumbs={false}
         infiniteLoop={true}
         autoPlay={true}
-        interval={5000} 
+        interval={5000}
         stopOnHover={false}
         transitionTime={800}
         showIndicators={false}
       >
         {slides.map((image, index) => (
-          <div key={index} className="slide-container">
+          <div key={index} className={styles.slideContainer}>
             <img src={image} alt={`Slide ${index + 1}`} />
           </div>
         ))}
       </Carousel>
 
       {/* 2. O Overlay (O Card Fixo por cima de tudo) */}
-      <div className="hero-overlay">
+      <div className={styles.heroOverlay}>
         <EmailCard />
       </div>
 
