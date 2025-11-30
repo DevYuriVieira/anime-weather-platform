@@ -18,11 +18,11 @@
   margin-top: auto;
 }
 
-.footer-content p {
+.footerContent p {
   margin: 0;
   font-size: 0.9rem; /* Um pouco menor que o texto normal fica elegante */
 }
 
-.footer-content strong {
+.footerContent strong {
   color: #fbc531; /* O nome do projeto em amarelo (igual o botão lá de cima) */
 }
