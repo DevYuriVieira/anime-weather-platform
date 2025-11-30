@@ -1,15 +1,15 @@
-.about-section {
+.aboutSection {
   padding: 80px 20px;
   background-color: #f9f9f9;
   color: #333;
 }
 
-.about-container {
-  max-width: 1100px; /* Um pouco mais largo pra caber a imagem */
+.aboutContainer {
+  max-width: 1100px; 
   margin: 0 auto;
 }
 
-.section-title {
+.sectionTitle {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 60px;
@@ -19,22 +19,21 @@
 }
 
 /* O Grid principal */
-.about-content {
+.aboutContent {
   display: grid;
-  /* Divide em duas colunas: Texto (flexível) e Imagem (fixa em 45%) */
-  grid-template-columns: 1fr 45%; 
+  grid-template-columns: 1fr 45%;
   gap: 60px;
   align-items: center;
 }
 
 /* Área de Texto */
-.about-text h3 {
+.aboutText h3 {
   font-size: 1.8rem;
   margin-bottom: 20px;
   color: #1a1a2e;
 }
 
-.about-text p {
+.aboutText p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #666;
@@ -42,50 +41,48 @@
 }
 
 /* Estatísticas */
-.about-stats {
+.aboutStats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   text-align: center;
   margin-top: 40px;
   padding-top: 30px;
-  border-top: 1px solid #eee; /* Uma linha sutil separando */
+  border-top: 1px solid #eee;
 }
 
-.stat-item h4 {
+.statItem h4 {
   font-size: 2.5rem;
   color: #fbc531;
   margin-bottom: 5px;
 }
 
-.stat-item p {
+.statItem p {
   font-weight: bold;
   color: #555;
 }
 
-/* --- ESTILO DA IMAGEM --- */
-.about-image-area img {
+/* Estilo da Imagem */
+.aboutImageArea img {
   width: 100%;
   height: auto;
-  border-radius: 20px; /* Cantos arredondados modernos */
-  /* Uma sombra suave azulada pra destacar do fundo branco */
+  border-radius: 20px;
   box-shadow: 0 15px 30px rgba(0, 168, 255, 0.15);
   object-fit: cover;
 }
 
 /* Mobile e Tablets */
 @media (max-width: 960px) {
-  .about-content {
-    grid-template-columns: 1fr; /* Um embaixo do outro */
+  .aboutContent {
+    grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  /* No celular, a imagem vem primeiro pra chamar atenção, depois o texto */
-  .about-image-area {
-    order: -1; 
+  .aboutImageArea {
+    order: -1;
   }
   
-  .section-title {
+  .sectionTitle {
     margin-bottom: 40px;
   }
 }
