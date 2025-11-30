@@ -1,13 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { FaCloudSun, FaPaperPlane, FaTimes } from "react-icons/fa";
-import "./GeminiChat.css";
+import styles from "./GeminiChat.module.css";
 
 const GeminiChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
-  
-  /* MENSAGEM INICIAL NEUTRA/CONVIDATIVA */
+
   const [messages, setMessages] = useState([
     {
       text: "Yo! I am the Weather Otaku. ☀️🌧️ Talk to me in English or Portuguese!",
@@ -22,10 +21,8 @@ const GeminiChat = () => {
 
   const runChat = async (userMessage) => {
     try {
-      /* --- ATUALIZADO PARA O MODELO FLASH (Mais rápido) --- */
       const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
-      /* --- PROMPT INTELIGENTE (POLIGLOTA) --- */
       const prompt = `
         You are "Weather Otaku", a fun assistant for the website "Anime & Weather".
         
@@ -50,7 +47,6 @@ const GeminiChat = () => {
       return response.text();
     } catch (error) {
       console.error("API Error:", error);
-      /* Mensagem de erro genérica */
       return "My connection fell into a genjutsu... Check your API Key and restart the server! 😵‍💫";
     }
   };
@@ -75,35 +71,49 @@ const GeminiChat = () => {
   }, [messages]);
 
   return (
-    <div className="gemini-chat-wrapper">
+    <div className={styles.geminiChatWrapper}>
       {!isOpen && (
-        <button className="chat-toggle-btn" onClick={() => setIsOpen(true)} aria-label="Open Chat with Weather Otaku">
+        <button
+          className={styles.chatToggleBtn}
+          onClick={() => setIsOpen(true)}
+          aria-label="Open Chat with Weather Otaku"
+        >
           <FaCloudSun size={28} />
         </button>
       )}
 
       {isOpen && (
-        <div className="chat-window">
-          <div className="chat-header">
-            <div className="header-title">
+        <div className={styles.chatWindow}>
+          <div className={styles.chatHeader}>
+            <div className={styles.headerTitle}>
               <FaCloudSun /> <span>Weather Otaku</span>
             </div>
-            <button className="close-btn" onClick={() => setIsOpen(false)}>
+            <button
+              className={styles.closeBtn}
+              onClick={() => setIsOpen(false)}
+            >
               <FaTimes />
             </button>
           </div>
 
-          <div className="chat-body">
+          <div className={styles.chatBody}>
             {messages.map((msg, index) => (
-              <div key={index} className={`message ${msg.sender}`}>
+              <div
+                key={index}
+                className={`${styles.message} ${styles[msg.sender]}`}
+              >
                 {msg.text}
               </div>
             ))}
-            {loading && <div className="message bot">Charging chakra...</div>}
+            {loading && (
+              <div className={`${styles.message} ${styles.bot}`}>
+                Charging chakra...
+              </div>
+            )}
             <div ref={messagesEndRef} />
           </div>
 
-          <div className="chat-footer">
+          <div className={styles.chatFooter}>
             <input
               type="text"
               placeholder="Ask me / Pergunte algo..."

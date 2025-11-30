@@ -1,5 +1,5 @@
 /* Container fixo na direita */
-.gemini-chat-wrapper {
+.geminiChatWrapper {
   position: fixed;
   bottom: 40px;
   right: 40px; 
@@ -8,7 +8,7 @@
 }
 
 /* Botão Redondo (Toggle) */
-.chat-toggle-btn {
+.chatToggleBtn {
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -23,12 +23,12 @@
   align-items: center;
 }
 
-.chat-toggle-btn:hover {
+.chatToggleBtn:hover {
   transform: scale(1.1);
 }
 
 /* Janela do Chat */
-.chat-window {
+.chatWindow {
   width: 350px;
   height: 500px;
   background: #fff;
@@ -47,7 +47,7 @@
 }
 
 /* Cabeçalho */
-.chat-header {
+.chatHeader {
   background: linear-gradient(90deg, #00a8ff, #0097e6);
   color: white;
   padding: 15px;
@@ -57,13 +57,13 @@
   font-weight: bold;
 }
 
-.header-title {
+.headerTitle {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.close-btn {
+.closeBtn {
   background: none;
   border: none;
   color: white;
@@ -72,7 +72,7 @@
 }
 
 /* Corpo das Mensagens */
-.chat-body {
+.chatBody {
   flex: 1;
   padding: 15px;
   overflow-y: auto;
@@ -90,7 +90,7 @@
   line-height: 1.4;
 }
 
-.message.bot {
+.bot {
   background: #fff;
   color: #333;
   align-self: flex-start;
@@ -98,7 +98,7 @@
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.message.user {
+.user {
   background: #fbc531; 
   color: #2f3640;
   align-self: flex-end;
@@ -107,7 +107,7 @@
 }
 
 /* Rodapé */
-.chat-footer {
+.chatFooter {
   padding: 15px;
   background: #fff;
   border-top: 1px solid #eee;
@@ -115,7 +115,7 @@
   gap: 10px;
 }
 
-.chat-footer input {
+.chatFooter input {
   flex: 1;
   padding: 10px;
   border: 1px solid #ddd;
@@ -124,11 +124,11 @@
   font-size: 0.9rem;
 }
 
-.chat-footer input:focus {
+.chatFooter input:focus {
   border-color: #00a8ff;
 }
 
-.chat-footer button {
+.chatFooter button {
   background: #00a8ff;
   color: white;
   border: none;
@@ -142,6 +142,6 @@
   transition: background 0.2s;
 }
 
-.chat-footer button:hover {
+.chatFooter button:hover {
   background: #0097e6;
 }
