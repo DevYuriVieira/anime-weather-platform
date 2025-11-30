@@ -1,30 +1,27 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { FaPlay, FaPause } from 'react-icons/fa'; // Ícones brancos
-import './MusicPlayer.css';
+import { FaPlay, FaPause } from 'react-icons/fa';
+import styles from './MusicPlayer.module.css';
 
-// Importe o som
+// Som
 import rainSound from '../../assets/music/rain.mp3';
 
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 
-  // Tenta dar Autoplay assim que carrega
   useEffect(() => {
     if (audioRef.current) {
-      // O volume começa baixinho pra não assustar (0.3 = 30%)
-      audioRef.current.volume = 0.3; 
+      audioRef.current.volume = 0.3;
       
       const playPromise = audioRef.current.play();
 
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
-            // Se o navegador deixar, toca e muda o ícone
             setIsPlaying(true);
           })
-          .catch((error) => {
-            console.log("Autoplay bloqueado pelo navegador (normal). O usuário precisa clicar.");
+          .catch(() => {
+            console.log("Autoplay bloqueado pelo navegador.");
             setIsPlaying(false);
           });
       }
@@ -41,12 +38,14 @@ const MusicPlayer = () => {
   };
 
   return (
-    <div className="music-player-container">
-      {/* O elemento de áudio fica invisível, loop = repete pra sempre */}
+    <div className={styles.musicPlayerContainer}>
       <audio ref={audioRef} src={rainSound} loop />
 
-      {/* O Botão Amarelo */}
-      <button className="player-btn" onClick={togglePlay} aria-label={isPlaying ? "Pause Music" : "Play Music"}>
+      <button
+        className={styles.playerBtn}
+        onClick={togglePlay}
+        aria-label={isPlaying ? "Pause Music" : "Play Music"}
+      >
         {isPlaying ? <FaPause /> : <FaPlay />}
       </button>
     </div>
