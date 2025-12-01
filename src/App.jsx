@@ -17,7 +17,7 @@ import GeminiChat from './components/GeminiChat/GeminiChat';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard/Dashboard';
 
-import './App.css';
+import './App.module.css';
 
 function App() {
   return (

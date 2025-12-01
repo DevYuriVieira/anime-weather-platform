@@ -1,28 +1,58 @@
 .footer {
-  /* O mesmo degradê da Navbar pra ficar combinando */
+  /* Degradê Azul */
   background: linear-gradient(90deg, #00a8ff 0%, #0097e6 100%);
   color: #ffffff;
-  
-  /* Espaçamento pra não ficar espremido */
-  padding: 20px 0;
-  
-  /* Centraliza o texto */
+  padding: 25px 0;
   text-align: center;
   font-family: sans-serif;
-  
-  /* Uma sombrinha pra cima pra separar do conteúdo */
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
-  
-  /* Garante que ele fique embaixo se tiver pouco conteúdo na tela */
   width: 100%;
   margin-top: auto;
 }
 
-.footerContent p {
-  margin: 0;
-  font-size: 0.9rem; /* Um pouco menor que o texto normal fica elegante */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 
-.footerContent strong {
-  color: #fbc531; /* O nome do projeto em amarelo (igual o botão lá de cima) */
+.copyright {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.copyright strong {
+  color: #fbc531; /* Amarelo */
+}
+
+/* Área dos Desenvolvedores */
+.developers {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilo dos Links */
+.dev-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dev-link:hover {
+  background-color: #fbc531;
+  color: #1a1a2e;
+  transform: translateY(-2px);
 }

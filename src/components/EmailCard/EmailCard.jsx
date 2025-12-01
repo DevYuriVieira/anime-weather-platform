@@ -4,13 +4,17 @@ import styles from './EmailCard.module.css';
 
 const EmailCard = () => {
   const navigate = useNavigate();
-
   const [inputEmail, setInputEmail] = useState('');
   const [inputPassword, setInputPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleLogin = (e) => {
     e.preventDefault();
+    
+    if (!inputEmail.trim() || !inputPassword.trim()) {
+      setError('Please fill in all fields.');
+      return;
+    }
 
     if (
       (inputEmail === 'admin' && inputPassword === 'admin') || 
@@ -27,46 +31,53 @@ const EmailCard = () => {
     navigate('/signup');
   };
 
+  const handleForgotPassword = () => {
+    const email = prompt("Enter your email to reset password:");
+    if (email) {
+      alert(`Recovery link sent to ${email}! (Check your spam folder 🌧️)`);
+    }
+  };
+
   return (
+    /* CORREÇÃO: Usando styles.loginCard (CamelCase) */
     <div className={styles.loginCard}>
       <h2>Welcome Back!</h2>
       <p>Enter your details to access the best of Anime & Weather.</p>
       
       <form className={styles.loginForm} onSubmit={handleLogin}>
         
-        {/* MENSAGEM DE ERRO */}
-        {error && (
-          <div className={styles.errorMsg}>
-            {error}
-          </div>
-        )}
+        {error && <div className={styles.errorMsg}>{error}</div>}
 
-        {/* Campo de Login/Email */}
         <div className={styles.inputGroup}>
           <input 
             type="text"
             placeholder="User or Email" 
-            required 
             value={inputEmail}
             onChange={(e) => setInputEmail(e.target.value)}
+            style={error ? { borderColor: '#ff4757' } : {}}
           />
         </div>
 
-        {/* Campo de Senha */}
         <div className={styles.inputGroup}>
           <input 
             type="password" 
             placeholder="Password" 
-            required 
             value={inputPassword}
             onChange={(e) => setInputPassword(e.target.value)}
+            style={error ? { borderColor: '#ff4757' } : {}}
           />
         </div>
 
-        <div className={styles.checkboxGroup}>
-          <label>
-            <input type="checkbox" /> Keep me signed in
-          </label>
+        <div className={styles.optionsRow}>
+          <div className={styles.checkboxGroup}>
+            <label>
+              <input type="checkbox" /> Keep me signed in
+            </label>
+          </div>
+          
+          <span className={styles.forgotPass} onClick={handleForgotPassword}>
+            Forgot Password?
+          </span>
         </div>
 
         <button type="submit" className={styles.btnLogin}>

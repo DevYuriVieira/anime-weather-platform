@@ -8,6 +8,15 @@
   margin: 0 auto;
 }
 
+.sectionTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #00a8ff; 
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .contactSubtitle {
   text-align: center;
   margin-bottom: 40px;
@@ -47,7 +56,9 @@
   font-size: 1rem;
   background-color: #f8f9fa;
   transition: all 0.3s;
-  color: #333333;
+  
+  /* Garante visibilidade do texto */
+  color: #333333 !important;
   font-family: sans-serif;
 }
 
@@ -59,21 +70,40 @@
   box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.1);
 }
 
+/* Botão Normal (Amarelo) */
 .btnSend {
-  padding: 15px 30px;
+  padding: 15px 40px; /* Aumentei um pouco a largura */
   background-color: #fbc531; 
   color: #fff;
   border: none;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
-  align-self: center; 
+  transition: all 0.3s ease;
+  align-self: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 
+/* Quando passa o mouse (Azul) */
 .btnSend:hover {
-  background-color: #00a8ff;
+  background-color: #00a8ff; /* Azul da marca */
+  transform: translateY(-3px); /* Pulinho pra cima */
+  box-shadow: 0 6px 12px rgba(0, 168, 255, 0.4); /* Brilho azul */
+}
+
+/* Mensagens de erro */
+.errorText {
+  color: #ff4757;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.inputError {
+  border-color: #ff4757 !important;
+  background-color: rgba(255, 71, 87, 0.05) !important;
 }
 
 /* Mobile */
