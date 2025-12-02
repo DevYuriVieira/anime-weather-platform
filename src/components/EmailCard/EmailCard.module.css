@@ -1,36 +1,39 @@
+/* --- CARD DE LOGIN (Vidro) --- */
 .loginCard {
-  /* Visual de Vidro (Voltou para 0.4) */
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.4); /* Vidro transparente */
   backdrop-filter: blur(10px);
-  
-  /* Tamanho e Espaçamento */
   padding: 2.5rem;
   border-radius: 20px;
   text-align: center;
   max-width: 400px;
   width: 90%;
-  
-  /* Sombras e Bordas */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  
-  /* Texto base escuro para o título e parágrafo ficarem legíveis no vidro */
-  color: #333; 
+  color: #333;
+  position: relative;
 }
 
 .loginCard h2 {
   color: #1a1a2e; 
   margin-bottom: 10px;
   font-size: 2rem;
-  /* Sombra branca leve para ler melhor no fundo transparente */
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .loginCard p {
-  color: #1a1a2e; /* Mudei pra escuro pra ler melhor no 0.4 */
+  color: #1a1a2e;
   margin-bottom: 20px;
   font-size: 0.95rem;
   font-weight: 500;
+}
+
+/* --- MENSAGEM DE ERRO (SEM CAIXA, SÓ TEXTO) --- */
+.errorMsg {
+  color: #ff3333; 
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .loginForm {
@@ -49,11 +52,12 @@
   outline: none;
   background: #ffffff;
   color: #333333 !important; 
-  transition: border-color 0.3s;
+  transition: all 0.3s;
 }
 
 .inputGroup input:focus {
-  border-color: #00a8ff; 
+  border-color: #00a8ff;
+  box-shadow: 0 0 10px rgba(0, 168, 255, 0.4);
 }
 
 /* LINHA DE OPÇÕES */
@@ -65,11 +69,10 @@
   margin-bottom: 10px;
 }
 
-/* --- CHECKBOX DOURADO NEON --- */
+/* CHECKBOX DOURADO */
 .checkboxGroup {
   display: flex;
   align-items: center;
-  margin-bottom: 0;
 }
 
 .checkboxLabel {
@@ -78,11 +81,9 @@
   gap: 8px;
   cursor: pointer;
   position: relative;
-  
-  /* AQUI: Texto Branco como você pediu */
-  color: #ffffff; 
+  color: #ffffff;
   font-weight: bold;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.8); /* Sombra preta pra ler em qualquer fundo */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
   user-select: none;
 }
 
@@ -94,31 +95,23 @@
   width: 0;
 }
 
-/* Quadrado Vazio */
 .checkmark {
   position: relative;
   height: 20px;
   width: 20px;
   background-color: rgba(255, 255, 255, 0.2);
-  border: 2px solid #fff; /* Borda branca */
+  border: 2px solid #fff;
   border-radius: 4px;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.checkboxLabel:hover input ~ .checkmark {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-/* Quadrado MARCADO (Dourado Neon) */
 .checkboxLabel input:checked ~ .checkmark {
   background-color: #fbc531;
   border-color: #fbc531;
-  box-shadow: 0 0 15px rgba(251, 197, 49, 0.8); /* O Brilho! */
+  box-shadow: 0 0 15px rgba(251, 197, 49, 0.8);
   transform: scale(1.05);
 }
 
-/* O "Check" (✔) Branco */
 .checkmark::after {
   content: "";
   position: absolute;
@@ -136,37 +129,26 @@
   display: block;
 }
 
-/* --- LINK ESQUECI A SENHA --- */
+/* LINK ESQUECI SENHA */
 .forgotPass {
-  color: #ffffff; /* Branco como pediu */
+  color: #ffffff;
   cursor: pointer;
   font-weight: bold;
   transition: color 0.2s;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.8); /* Sombra preta pra ler em qualquer fundo */
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8);
 }
 
 .forgotPass:hover {
-  color: #fbc531; /* Amarelo no hover */
+  color: #fbc531;
   text-decoration: underline;
-  text-shadow: 0 0 10px rgba(251, 197, 49, 0.6);
 }
 
-/* MENSAGENS E BOTÕES */
-.errorMsg {
-  color: #ff4757;
-  background: rgba(255, 71, 87, 0.1);
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  border: 1px solid rgba(255, 71, 87, 0.3);
-}
-
+/* BOTÕES */
 .btnLogin {
   padding: 12px;
   border: none;
   border-radius: 8px;
-  background-color: #fbc531;
+  background: linear-gradient(135deg, #fbc531, #e1b12c);
   color: #2f3640;
   font-size: 1.1rem;
   font-weight: bold;
@@ -175,43 +157,122 @@
 }
 
 .btnLogin:hover {
-  background-color: #e1b12c;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(251, 197, 49, 0.4);
 }
 
 .btnSignup {
   padding: 12px;
   border: 2px solid #00a8ff;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.8);
   color: #00a8ff;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s;
-  background: rgba(255,255,255,0.8); /* Fundo leitoso pra ler o azul */
 }
 
 .btnSignup:hover {
   background: #00a8ff;
   color: white;
+  box-shadow: 0 0 10px rgba(0, 168, 255, 0.4);
 }
 
 .divider {
   font-size: 0.85rem;
-  color: #333; /* Escuro pra ler no vidro */
+  color: #fff;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
-.divider::before, 
-.divider::after {
+.divider::before, .divider::after {
   content: "";
   height: 1px;
-  background: #666;
+  background: #fff;
   flex: 1;
+}
+
+/* MODAL */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modalCard {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  animation: popIn 0.3s ease;
+}
+
+.modalCard h3 {
+  color: #1a1a2e;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.modalCard p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.modalInput {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #333;
+  outline: none;
+}
+
+.modalActions {
+  display: flex;
+  gap: 10px;
+}
+
+.btnCancel {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #eee;
+  color: #555;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btnConfirm {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #00a8ff;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
