@@ -335,3 +335,129 @@
   to { transform: translateY(0) scale(1); opacity: 1; }
 }
 .modalCard, .modalContent { animation: modalPop 200ms ease-out; }
+
+/* --- Telas muito pequenas (≤ 380px) --- */
+@media (max-width: 380px) {
+
+  .loginCard {
+    padding: 1.6rem;
+    border-radius: 16px;
+    max-width: 92%;
+  }
+
+  .loginCard h2 {
+    font-size: 1.6rem;
+  }
+
+  .inputGroup input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .optionsRow {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .checkboxLabel {
+    font-size: 0.85rem;
+  }
+
+  .btnLogin,
+  .btnSignup {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .divider {
+    font-size: 0.75rem;
+  }
+
+  /* Modal */
+  .modalCard, .modalContent {
+    padding: 20px;
+    border-radius: 22px;
+    max-width: 92%;
+  }
+
+  .modalInput {
+    font-size: 0.9rem;
+    padding: 12px 14px;
+  }
+
+  .modalButtons,
+  .modalActions {
+    flex-direction: column;
+  }
+
+  .btnCancel,
+  .btnConfirm {
+    width: 100%;
+  }
+}
+
+/* --- Smartphones médios (381px – 480px) --- */
+@media (max-width: 480px) {
+
+  .loginCard {
+    padding: 2rem;
+    width: 90%;
+  }
+
+  .loginCard h2 {
+    font-size: 1.8rem;
+  }
+
+  .optionsRow {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Modal */
+  .modalCard, .modalContent {
+    width: 90%;
+  }
+}
+
+/* --- Tablets (600px – 900px) --- */
+@media (min-width: 600px) and (max-width: 900px) {
+
+  .loginCard {
+    max-width: 480px;
+    padding: 3rem;
+    border-radius: 24px;
+  }
+
+  .loginCard h2 {
+    font-size: 2.2rem;
+  }
+
+  /* Modal */
+  .modalCard, .modalContent {
+    max-width: 480px;
+    padding: 30px;
+    border-radius: 32px;
+  }
+
+  .modalInput {
+    font-size: 1.1rem;
+    padding: 16px;
+  }
+
+  .btnCancel,
+  .btnConfirm {
+    padding: 14px;
+  }
+}
+
+/* --- Desktop largo (≥ 1200px) --- */
+@media (min-width: 1200px) {
+
+  .loginCard {
+    max-width: 450px;
+  }
+
+  .modalCard, .modalContent {
+    max-width: 450px;
+  }
+}
