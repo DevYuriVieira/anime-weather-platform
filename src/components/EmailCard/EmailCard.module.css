@@ -197,7 +197,7 @@
   flex: 1;
 }
 
-/* ================= FIXED PREMIUM MODAL (COBERTURA COMPLETA) ================= */
+/* ================= FIXED PREMIUM MODAL ================= */
 
 /* Overlay - garante centralização e halo */
 .modalOverlay {
@@ -216,7 +216,7 @@
   backdrop-filter: blur(6px);
 }
 
-/* Suporta ambos os nomes: .modalCard (seu JSX original) e .modalContent (minha sugestão) */
+/* Suporta ambos os nomes: .modalCard */
 .modalCard,
 .modalContent {
   width: 92%;
@@ -329,7 +329,7 @@
   max-width: 100%;
 }
 
-/* animação suave de entrada (opcional) */
+/* animação suave de entrada */
 @keyframes modalPop {
   from { transform: translateY(6px) scale(0.98); opacity: 0; }
   to { transform: translateY(0) scale(1); opacity: 1; }
