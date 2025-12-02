@@ -39,7 +39,6 @@ const EmailCard = () => {
   };
 
   return (
-    /* CORREÇÃO: Usando styles.loginCard (CamelCase) */
     <div className={styles.loginCard}>
       <h2>Welcome Back!</h2>
       <p>Enter your details to access the best of Anime & Weather.</p>
@@ -70,8 +69,11 @@ const EmailCard = () => {
 
         <div className={styles.optionsRow}>
           <div className={styles.checkboxGroup}>
-            <label>
-              <input type="checkbox" /> Keep me signed in
+            {/* AQUI ESTÁ A MUDANÇA PRO CHECKBOX DOURADO */}
+            <label className={styles.checkboxLabel}>
+              <input type="checkbox" />
+              <span className={styles.checkmark}></span> {/* O quadrado mágico */}
+              Keep me signed in
             </label>
           </div>
           

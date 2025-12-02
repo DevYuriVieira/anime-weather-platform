@@ -1,6 +1,6 @@
 .loginCard {
-  /* Visual de Vidro */
-  background: rgba(255, 255, 255, 0.4); 
+  /* Visual de Vidro (Voltou para 0.4) */
+  background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
   
   /* Tamanho e Espaçamento */
@@ -14,7 +14,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.5);
   
-  /* Texto escuro */
+  /* Texto base escuro para o título e parágrafo ficarem legíveis no vidro */
   color: #333; 
 }
 
@@ -22,12 +22,15 @@
   color: #1a1a2e; 
   margin-bottom: 10px;
   font-size: 2rem;
+  /* Sombra branca leve para ler melhor no fundo transparente */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .loginCard p {
-  color: #4a4a5e;
+  color: #1a1a2e; /* Mudei pra escuro pra ler melhor no 0.4 */
   margin-bottom: 20px;
   font-size: 0.95rem;
+  font-weight: 500;
 }
 
 .loginForm {
@@ -53,7 +56,7 @@
   border-color: #00a8ff; 
 }
 
-/* LINHA DE OPÇÕES (Checkbox + Forgot Password) */
+/* LINHA DE OPÇÕES */
 .optionsRow {
   display: flex;
   justify-content: space-between;
@@ -62,42 +65,93 @@
   margin-bottom: 10px;
 }
 
-/* CHECKBOX */
+/* --- CHECKBOX DOURADO NEON --- */
 .checkboxGroup {
   display: flex;
   align-items: center;
   margin-bottom: 0;
 }
 
-.checkboxGroup label {
+.checkboxLabel {
   display: flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  color: #4a4a5e;
+  position: relative;
+  
+  /* AQUI: Texto Branco como você pediu */
+  color: #ffffff; 
+  font-weight: bold;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8); /* Sombra preta pra ler em qualquer fundo */
+  user-select: none;
 }
 
-.checkboxGroup input {
-  width: 16px;
-  height: 16px;
+.checkboxLabel input {
+  position: absolute;
+  opacity: 0;
   cursor: pointer;
-  margin: 0;
+  height: 0;
+  width: 0;
 }
 
-/* LINK ESQUECI A SENHA */
+/* Quadrado Vazio */
+.checkmark {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid #fff; /* Borda branca */
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.checkboxLabel:hover input ~ .checkmark {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Quadrado MARCADO (Dourado Neon) */
+.checkboxLabel input:checked ~ .checkmark {
+  background-color: #fbc531;
+  border-color: #fbc531;
+  box-shadow: 0 0 15px rgba(251, 197, 49, 0.8); /* O Brilho! */
+  transform: scale(1.05);
+}
+
+/* O "Check" (✔) Branco */
+.checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkboxLabel input:checked ~ .checkmark::after {
+  display: block;
+}
+
+/* --- LINK ESQUECI A SENHA --- */
 .forgotPass {
-  color: #ffffff;
+  color: #ffffff; /* Branco como pediu */
   cursor: pointer;
   font-weight: bold;
   transition: color 0.2s;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.8); /* Sombra preta pra ler em qualquer fundo */
 }
 
 .forgotPass:hover {
-  color: #fbc531;
+  color: #fbc531; /* Amarelo no hover */
   text-decoration: underline;
+  text-shadow: 0 0 10px rgba(251, 197, 49, 0.6);
 }
 
-/* MENSAGEM DE ERRO */
+/* MENSAGENS E BOTÕES */
 .errorMsg {
   color: #ff4757;
   background: rgba(255, 71, 87, 0.1);
@@ -108,7 +162,6 @@
   border: 1px solid rgba(255, 71, 87, 0.3);
 }
 
-/* BOTÕES */
 .btnLogin {
   padding: 12px;
   border: none;
@@ -137,6 +190,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s;
+  background: rgba(255,255,255,0.8); /* Fundo leitoso pra ler o azul */
 }
 
 .btnSignup:hover {
@@ -146,7 +200,8 @@
 
 .divider {
   font-size: 0.85rem;
-  color: #999;
+  color: #333; /* Escuro pra ler no vidro */
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,6 +212,6 @@
 .divider::after {
   content: "";
   height: 1px;
-  background: #ccc;
+  background: #666;
   flex: 1;
 }
