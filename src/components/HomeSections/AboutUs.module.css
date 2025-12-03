@@ -5,7 +5,7 @@
 }
 
 .aboutContainer {
-  max-width: 1100px; 
+  max-width: 1300px; 
   margin: 0 auto;
 }
 
@@ -21,7 +21,7 @@
 /* O Grid principal */
 .aboutContent {
   display: grid;
-  grid-template-columns: 1fr 45%;
+  grid-template-columns: 1fr 1.5fr;
   gap: 60px;
   align-items: center;
 }
@@ -69,6 +69,12 @@
   border-radius: 20px;
   box-shadow: 0 15px 30px rgba(0, 168, 255, 0.15);
   object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutImageArea img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 168, 255, 0.25);
 }
 
 /* Mobile e Tablets */
