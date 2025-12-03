@@ -306,8 +306,8 @@
   line-height: 1.4;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
+/* Mobile e Tablet */
+@media (max-width: 960px) {
   .resultsGrid {
     gap: 40px;
   }

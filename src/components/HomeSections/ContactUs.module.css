@@ -107,7 +107,7 @@
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .formRow {
     grid-template-columns: 1fr;
   }

@@ -146,8 +146,8 @@
   background: #0097e6;
 }
 
-/* --- RESPONSIVIDADE MOBILE (Telas menores que 480px) --- */
-@media (max-width: 480px) {
+/* --- RESPONSIVIDADE MOBILE E TABLET --- */
+@media (max-width: 960px) {
   
   /* 1. Reposiciona o Container para mais perto da borda */
   .geminiChatWrapper {

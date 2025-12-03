@@ -72,7 +72,7 @@
 }
 
 /* Responsividade para celular */
-@media (max-width: 600px) {
+@media (max-width: 960px) {
   .developers {
     flex-direction: column; 
     gap: 15px;
