@@ -145,3 +145,38 @@
 .chatFooter button:hover {
   background: #0097e6;
 }
+
+/* --- RESPONSIVIDADE MOBILE (Telas menores que 480px) --- */
+@media (max-width: 480px) {
+  
+  /* 1. Reposiciona o Container para mais perto da borda */
+  .geminiChatWrapper {
+    right: 15px;  /* Antes era 40px */
+    bottom: 15px; /* Antes era 40px */
+  }
+
+  /* 2. Diminui levemente o botão toggle */
+  .chatToggleBtn {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* 3. A Janela do Chat precisa ser FLUÍDA */
+  .chatWindow {
+    /* Largura dinâmica: Tela inteira menos margens */
+    width: calc(100vw - 30px); 
+    
+    /* Altura dinâmica: Para não cobrir o teclado inteiro */
+    height: 60vh; 
+    
+    /* Reposiciona a janela para garantir que fique visível */
+    position: fixed; 
+    bottom: 75px; /* Fica logo acima do botão toggle */
+    right: 15px;  /* Alinhado à direita */
+  }
+
+  /* Ajuste no cabeçalho para ocupar menos espaço */
+  .chatHeader {
+    padding: 10px;
+  }
+}
