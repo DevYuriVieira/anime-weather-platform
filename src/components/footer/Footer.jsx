@@ -1,4 +1,4 @@
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa"; // Importei o ícone do LinkedIn
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -16,27 +16,54 @@ export default function Footer() {
         <div className={styles.developers}>
           <span>Developed by:</span>
           
-          {/* Link Yuri */}
-          <a 
-            href="https://github.com/DevYuriVieira" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className={styles['dev-link']}
-          >
-            <FaGithub /> Yuri Vieira
-          </a>
+          {/* --- GRUPO YURI --- */}
+          <div className={styles.devGroup}>
+            {/* GitHub Yuri */}
+            <a 
+              href="https://github.com/DevYuriVieira" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles['dev-link']}
+            >
+              <FaGithub /> Yuri Vieira
+            </a>
+            {/* LinkedIn Yuri (Apenas ícone para ficar clean) */}
+            <a 
+              href="https://www.linkedin.com/in/yuri-vieira-615131188/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={`${styles['dev-link']} ${styles['icon-only']}`}
+              title="LinkedIn Yuri"
+            >
+              <FaLinkedin />
+            </a>
+          </div>
 
-          <span>&</span>
+          <span className={styles.divider}>&</span>
 
-          {/* Link Micaela */}
-          <a 
-            href="https://github.com/MicaelaDinizP" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className={styles['dev-link']}
-          >
-            <FaGithub /> Micaela Paes
-          </a>
+          {/* --- GRUPO MICAELA --- */}
+          <div className={styles.devGroup}>
+            {/* GitHub Micaela */}
+            <a 
+              href="https://github.com/MicaelaDinizP" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles['dev-link']}
+            >
+              <FaGithub /> Micaela Paes
+            </a>
+            {/* LinkedIn Micaela */}
+            <a 
+              href="https://www.linkedin.com/in/micaela-paes/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={`${styles['dev-link']} ${styles['icon-only']}`}
+              title="LinkedIn Micaela"
+            >
+              <FaLinkedin />
+            </a>
+          </div>
+
         </div>
       </div>
     </footer>

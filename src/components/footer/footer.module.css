@@ -31,19 +31,27 @@
 .developers {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center; /* Garante centralização */
+  gap: 15px; /* Espaço entre o grupo do Yuri e o da Micaela */
   font-size: 0.95rem;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
-/* Estilo dos Links */
+/* NOVO: Agrupa o Nome + LinkedIn */
+.devGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaço entre o Github e o LinkedIn */
+}
+
+/* Estilo dos Links (Serve para GitHub e LinkedIn) */
 .dev-link {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5px;
   transition: all 0.3s ease;
   padding: 5px 10px;
@@ -51,8 +59,27 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Ajuste específico para botão só com ícone (LinkedIn) */
+.icon-only {
+  padding: 6px 8px; /* Levemente diferente para ficar mais quadrado */
+  font-size: 1.1rem;
+}
+
 .dev-link:hover {
   background-color: #fbc531;
   color: #1a1a2e;
   transform: translateY(-2px);
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+  .developers {
+    flex-direction: column; 
+    gap: 15px;
+  }
+  
+  /* Esconde o "&" no mobile se estiver solto em um span */
+  .divider { 
+    display: none; 
+  }
 }
