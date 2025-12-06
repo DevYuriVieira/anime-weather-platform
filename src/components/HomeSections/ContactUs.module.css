@@ -1,3 +1,49 @@
+.contactSection.moonlight {
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
+  color: #e0e6ff;
+}
+.contactSection.moonlight .sectionTitle {
+  color: #b8a8ff;
+  text-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+}
+.contactSection.moonlight .contactSubtitle {
+  color: #a0a8d8;
+}
+.contactSection.moonlight .inputWrap label {
+  color: #b8a8ff;
+}
+.contactSection.moonlight .inputWrap input,
+.contactSection.moonlight .inputWrap textarea {
+  background-color: rgba(30, 25, 45, 0.8);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+  color: #e0e6ff !important;
+}
+.contactSection.moonlight .inputWrap input:focus,
+.contactSection.moonlight .inputWrap textarea:focus {
+  border-color: #b8a8ff;
+  background-color: rgba(30, 25, 45, 0.95);
+  box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.2);
+}
+.contactSection.moonlight .inputWrap input::placeholder,
+.contactSection.moonlight .inputWrap textarea::placeholder {
+  color: #7080a8;
+}
+.contactSection.moonlight .btnSend {
+  background-color: #8a2be2;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+}
+.contactSection.moonlight .btnSend:hover {
+  background-color: #9d4edd;
+  box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5);
+}
+.contactSection.moonlight .inputError {
+  border-color: #ff6b7a !important;
+  background-color: rgba(255, 71, 87, 0.08) !important;
+}
+.contactSection.moonlight .errorText {
+  color: #ff8a95;
+}
 .contactSection {
   padding: 80px 20px;
   background-color: #ffffff;

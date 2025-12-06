@@ -1,3 +1,65 @@
+/* Botão de alternância de tema (moonlight) */
+.moonBtn {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.moonBtn:hover {
+  background: #b8a8ff;
+  color: #2d1b3d;
+  box-shadow: 0 4px 16px rgba(138,43,226,0.18);
+}
+
+/* Light-mode appearance for the toggle: yellow background */
+.moonBtnLight {
+  background-color: var(--accent-color);
+  color: var(--dark-text);
+  box-shadow: 0 6px 16px rgba(251,197,49,0.28);
+}
+.moonBtnLight:hover {
+  background-color: #e1b12c;
+}
+
+/* Dark-mode appearance for the toggle: subtle moon gradient */
+.moonBtnDark {
+  background: radial-gradient(circle at 30% 20%, rgba(184,168,255,0.14), rgba(30,20,45,0.85));
+  color: #b8a8ff;
+  box-shadow: 0 6px 20px rgba(80,60,140,0.22);
+}
+
+/* Neon glow for the moon icon when the toggle is light-mode */
+.moonBtnLight svg {
+  color: #fff; /* ensure icon is white */
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.9)) drop-shadow(0 0 12px rgba(155,89,255,0.45));
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.moonBtnLight:hover svg {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.95)) drop-shadow(0 0 18px rgba(155,89,255,0.55));
+}
+
+/* Optional subtle neon pulse */
+@keyframes neonPulse {
+  0% { filter: drop-shadow(0 0 6px rgba(255,255,255,0.9)) drop-shadow(0 0 12px rgba(155,89,255,0.45)); }
+  50% { filter: drop-shadow(0 0 8px rgba(255,255,255,0.95)) drop-shadow(0 0 18px rgba(155,89,255,0.55)); }
+  100% { filter: drop-shadow(0 0 6px rgba(255,255,255,0.9)) drop-shadow(0 0 12px rgba(155,89,255,0.45)); }
+}
+
+.moonBtnLight.neon svg {
+  animation: neonPulse 2.5s ease-in-out infinite;
+}
 :global(:root) {
   /* Minhas cores do tema */
   --primary-color: #00a8ff; /* Azul céu vibrante */
@@ -7,7 +69,9 @@
 }
 
 /* Configuração geral da barra */
+
 .navbar {
+  /* match footer default background */
   background: linear-gradient(90deg, #00a8ff 0%, #0097e6 100%);
   height: 80px;
   display: flex;
@@ -18,6 +82,68 @@
   top: 0;
   z-index: 999;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.4s;
+}
+
+.moonlight {
+  /* match footer moonlight background */
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #2d1b3d 100%);
+  box-shadow: 0 4px 20px 0 rgba(80, 60, 180, 0.25);
+  /* Simula estrelas */
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: background 0.45s ease, box-shadow 0.45s ease;
+}
+
+/* Nav icons (links) change color in moonlight */
+.moonlight .navIcon {
+  color: #b8a8ff;
+  transition: color 0.35s ease;
+}
+
+/* Contact button becomes moon-themed in moonlight */
+.moonlight .navLinksBtn {
+  /* Match ContactUs .btnSend in moonlight */
+  background-color: #8a2be2; /* same as .contactSection.moonlight .btnSend */
+  color: #ffffff;
+  border: 1px solid rgba(138,43,226,0.18);
+  box-shadow: 0 6px 20px rgba(138,43,226,0.28);
+  transition: background 0.25s ease, color 0.18s ease, transform 0.18s ease, box-shadow 0.25s ease;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  padding: 10px 28px;
+}
+
+/* Hover: match ContactUs .btnSend:hover */
+.moonlight .navLinksBtn:hover {
+  transform: translateY(-3px);
+  background-color: #9d4edd;
+  box-shadow: 0 6px 24px rgba(138,43,226,0.38);
+}
+
+/* Icon inside the Contact button should be highly legible */
+.moonlight .navLinksBtn .navIcon {
+  color: #ffffff;
+  font-size: 1.18rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Also ensure regular nav links are legible in moonlight and have hover effect */
+.moonlight .navLinks {
+  color: #b8a8ff;
+  transition: color 0.2s ease, background 0.18s ease, transform 0.18s ease;
+}
+.moonlight .navLinks:hover {
+  color: #ffffff;
+  background-color: rgba(255,255,255,0.04);
+  border-radius: 4px;
+}
+
+/* Keep the moon toggle button background subtle but let its icon color be explicit in JSX */
+.moonBtn {
+  transition: background 0.35s, transform 0.25s, box-shadow 0.35s;
 }
 
 .navbarContainer {
@@ -63,19 +189,24 @@
 
 /* Botão destaque (Contact Us) */
 .navLinksBtn {
-  background-color: var(--accent-color);
-  color: var(--dark-text);
+  /* match ContactUs .btnSend color */
+  background-color: #fbc531;
+  color: #ffffff;
   padding: 10px 24px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .navLinksBtn:hover {
-  background-color: #e1b12c;
+  background-color: #00a8ff; /* match .btnSend:hover */
   transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 168, 255, 0.4);
 }
 
 /* Ícone do menu (Hambúrguer) - Escondido no PC */

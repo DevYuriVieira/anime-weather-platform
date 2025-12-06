@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 /* --- COMPONENTES GERAIS --- */
 import Navbar from './components/navbar/Navbar';
@@ -21,9 +22,10 @@ import './App.module.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Routes>
+    <ThemeProvider>
+      <Router>
+        <div className="App">
+          <Routes>
 
           {/* HOME */}
           <Route path="/" element={
@@ -53,9 +55,10 @@ function App() {
             </>
           } />
 
-        </Routes>
-      </div>
-    </Router>
+          </Routes>
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 

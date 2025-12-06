@@ -139,11 +139,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background 0.2s;
+  transition: background 0.25s, box-shadow 0.25s, transform 0.25s;
 }
 
 .chatFooter button:hover {
   background: #0097e6;
+}
+
+/* Moon variants */
+.moonToggle {
+  /* full-moon colored background for the toggle in dark mode */
+  background: #b8a8ff;
+  color: #2d1b3d;
+  box-shadow: 0 6px 20px rgba(80,60,140,0.28);
+  transform: translateY(-2px);
+}
+
+.sendBtn {
+  background: #00a8ff;
+}
+.sendBtn.moon {
+  background: #b8a8ff;
+  color: #2d1b3d;
+  box-shadow: 0 6px 18px rgba(80,60,140,0.22);
+}
+
+/* Reusable moon class so JSX can toggle a single class across modules */
+.moon {
+  background: linear-gradient(135deg, rgba(184,168,255,0.14), rgba(45,20,60,0.9));
+  color: #b8a8ff;
 }
 
 /* --- RESPONSIVIDADE MOBILE E TABLET --- */

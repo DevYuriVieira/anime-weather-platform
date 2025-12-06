@@ -1,3 +1,27 @@
+.footer.moonlight {
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #2d1b3d 100%);
+  box-shadow: 0 -4px 20px rgba(138, 43, 226, 0.3);
+}
+.footer.moonlight .copyright {
+  color: #c0c8e8;
+}
+.footer.moonlight .copyright strong {
+  color: #b8a8ff;
+  text-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+}
+.footer.moonlight .developers {
+  color: #a0a8d8;
+}
+.footer.moonlight .dev-link {
+  color: #e0e6ff;
+  background-color: rgba(138, 43, 226, 0.2);
+  border: 1px solid rgba(138, 43, 226, 0.3);
+}
+.footer.moonlight .dev-link:hover {
+  background-color: #8a2be2;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);
+}
 .footer {
   /* Degradê Azul */
   background: linear-gradient(90deg, #00a8ff 0%, #0097e6 100%);

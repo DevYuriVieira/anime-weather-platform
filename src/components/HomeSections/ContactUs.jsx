@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useTheme } from '../../contexts/ThemeContext';
 import styles from './ContactUs.module.css';
 
 const ContactUs = () => {
+  const { isMoonlight } = useTheme();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -51,7 +53,7 @@ const ContactUs = () => {
   };
 
   return (
-    <section id="contact" className={styles.contactSection}>
+    <section id="contact" className={`${styles.contactSection} ${isMoonlight ? styles.moonlight : ''}`}> 
       <div className={styles.contactContainer}>
         <h2 className={styles.sectionTitle}>Get in Touch</h2>
         <p className={styles.contactSubtitle}>Have questions? We'd love to hear from you.</p>

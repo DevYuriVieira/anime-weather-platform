@@ -1,11 +1,12 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa"; // Importei o ícone do LinkedIn
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useTheme } from '../../contexts/ThemeContext';
 import styles from "./Footer.module.css";
 
 export default function Footer() {
+  const { isMoonlight } = useTheme();
   const currentYear = new Date().getFullYear();
-
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${isMoonlight ? styles.moonlight : ''}`}> 
       <div className={styles['footer-content']}>
         {/* Linha do Copyright */}
         <p className={styles.copyright}>

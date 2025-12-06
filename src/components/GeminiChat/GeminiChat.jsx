@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useTheme } from '../../contexts/ThemeContext';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { FaCloudSun, FaPaperPlane, FaTimes } from "react-icons/fa";
 import styles from "./GeminiChat.module.css";
@@ -70,15 +71,17 @@ const GeminiChat = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  const { isMoonlight } = useTheme();
+  const moonColor = '#b8a8ff';
   return (
     <div className={styles.geminiChatWrapper}>
       {!isOpen && (
         <button
-          className={styles.chatToggleBtn}
+          className={`${styles.chatToggleBtn} ${isMoonlight ? styles.moonToggle : ''}`}
           onClick={() => setIsOpen(true)}
           aria-label="Open Chat with Weather Otaku"
         >
-          <FaCloudSun size={28} />
+          <FaCloudSun size={28} color={isMoonlight ? '#2d1b3d' : '#fff'} />
         </button>
       )}
 
@@ -86,13 +89,13 @@ const GeminiChat = () => {
         <div className={styles.chatWindow}>
           <div className={styles.chatHeader}>
             <div className={styles.headerTitle}>
-              <FaCloudSun /> <span>Weather Otaku</span>
+              <FaCloudSun color={isMoonlight ? '#2d1b3d' : '#fff'} /> <span>Weather Otaku</span>
             </div>
             <button
               className={styles.closeBtn}
               onClick={() => setIsOpen(false)}
             >
-              <FaTimes />
+              <FaTimes color={isMoonlight ? '#2d1b3d' : '#fff'} />
             </button>
           </div>
 
@@ -121,8 +124,8 @@ const GeminiChat = () => {
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={(e) => e.key === "Enter" && handleSend()}
             />
-            <button onClick={handleSend} disabled={loading}>
-              <FaPaperPlane />
+            <button onClick={handleSend} disabled={loading} className={`${styles.sendBtn} ${isMoonlight ? styles.moon : ''}`}>
+              <FaPaperPlane color={isMoonlight ? '#2d1b3d' : '#fff'} />
             </button>
           </div>
         </div>

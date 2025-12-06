@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { FaPlay, FaPause } from 'react-icons/fa';
+import { useTheme } from '../../contexts/ThemeContext';
 import styles from './MusicPlayer.module.css';
 
 // Som
@@ -37,16 +38,18 @@ const MusicPlayer = () => {
     setIsPlaying(!isPlaying);
   };
 
+  const { isMoonlight } = useTheme();
+  const moonColor = '#b8a8ff';
+  const moonIconText = '#2d1b3d';
   return (
     <div className={styles.musicPlayerContainer}>
       <audio ref={audioRef} src={rainSound} loop />
-
       <button
-        className={styles.playerBtn}
+        className={`${styles.playerBtn} ${isMoonlight ? styles.moon : ''}`}
         onClick={togglePlay}
         aria-label={isPlaying ? "Pause Music" : "Play Music"}
       >
-        {isPlaying ? <FaPause /> : <FaPlay />}
+        {isPlaying ? <FaPause color={isMoonlight ? moonIconText : undefined} /> : <FaPlay color={isMoonlight ? moonIconText : undefined} />}
       </button>
     </div>
   );

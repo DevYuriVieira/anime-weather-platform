@@ -1,3 +1,33 @@
+.aboutSection.moonlight {
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #2d1b3d 100%);
+  color: #e0e6ff;
+}
+.aboutSection.moonlight .sectionTitle {
+  color: #b8a8ff;
+  text-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+}
+.aboutSection.moonlight .aboutText h3 {
+  color: #e0e6ff;
+}
+.aboutSection.moonlight .aboutText p {
+  color: #c0c8e8;
+}
+.aboutSection.moonlight .statItem h4 {
+  color: #b8a8ff;
+  text-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+}
+.aboutSection.moonlight .statItem p {
+  color: #a0a8d8;
+}
+.aboutSection.moonlight .aboutStats {
+  border-top: 1px solid rgba(138, 43, 226, 0.2);
+}
+.aboutSection.moonlight .aboutImageArea img {
+  box-shadow: 0 15px 30px rgba(138, 43, 226, 0.25);
+}
+.aboutSection.moonlight .aboutImageArea img:hover {
+  box-shadow: 0 20px 40px rgba(138, 43, 226, 0.4);
+}
 .aboutSection {
   padding: 80px 20px;
   background-color: #f9f9f9;

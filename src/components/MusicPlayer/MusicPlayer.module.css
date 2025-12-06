@@ -24,7 +24,7 @@
   /* Efeitos */
   cursor: pointer;
   box-shadow: 0 4px 15px rgba(251, 197, 49, 0.6);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .playerBtn:hover {
@@ -54,4 +54,13 @@
     /* Reduz levemente a sombra para não "borrar" demais na tela pequena */
     box-shadow: 0 3px 10px rgba(251, 197, 49, 0.5);
   }
+}
+
+/* Variante para modo moonlight */
+.moon {
+  /* Full-moon colored background for dark mode */
+  background: #b8a8ff; /* moon full color */
+  color: #2d1b3d; /* dark text/icon for contrast */
+  box-shadow: 0 6px 22px rgba(80,60,140,0.35);
+  transform: translateY(-2px);
 }

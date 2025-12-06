@@ -23,3 +23,8 @@ pois CSS Modules não aplica estilos em tags HTML globais.
   text-decoration: none;
   color: inherit;
 }
+
+/* Smooth global transitions for theme changes */
+:global(body) {
+  transition: background-color 0.45s ease, color 0.35s ease;
+}

@@ -1,9 +1,11 @@
+import { useTheme } from '../../contexts/ThemeContext';
 import styles from './AboutUs.module.css';
 import aboutImage from '../../assets/images/about-concept.png'; 
 
 const AboutUs = () => {
+  const { isMoonlight } = useTheme();
   return (
-    <section id="about" className={styles.aboutSection}>
+    <section id="about" className={`${styles.aboutSection} ${isMoonlight ? styles.moonlight : ''}`}> 
       <div className={styles.aboutContainer}>
         <h2 className={styles.sectionTitle}>Who We Are</h2>
         
