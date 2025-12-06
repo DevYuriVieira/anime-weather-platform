@@ -20,7 +20,7 @@ export const getAnimesByWeather = async (weatherCondition) => {
   const genreId = weatherToGenre[weatherCondition] || 1; 
   
   try {
-    const response = await fetch(`${BASE_URL}/anime?genres=${genreId}&order_by=popularity&limit=6`);
+  const response = await fetch(`${BASE_URL}/anime?genres=${genreId}&order_by=popularity&limit=8`);
     const data = await response.json();
     return data.data; // Retorna a lista de animes
   } catch (error) {
