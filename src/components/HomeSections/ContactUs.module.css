@@ -38,11 +38,11 @@
   box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5);
 }
 .contactSection.moonlight .inputError {
-  border-color: #ff6b7a !important;
-  background-color: rgba(255, 71, 87, 0.08) !important;
+  border-color: #e8b4ff !important;
+  background-color: rgba(232, 180, 255, 0.1) !important;
 }
 .contactSection.moonlight .errorText {
-  color: #ff8a95;
+  color: #e8b4ff;
 }
 .contactSection {
   padding: 80px 20px;
