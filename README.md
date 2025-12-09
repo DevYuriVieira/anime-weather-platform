@@ -226,5 +226,220 @@ npm run dev
 
 MIT License — free to use, modify and distribute.
 
+# 🇧🇷🌦️🎌 Anime Weather Platform — React, Inteligência Climática & IA Contextual
+
+Uma plataforma moderna e orientada a dados que combina **análise climática em tempo real**, **recomendações atmosféricas de anime**, **temas adaptativos** e **interação com IA**.  
+Projetada com foco em escalabilidade, acessibilidade, arquitetura limpa e experiência global do usuário.
+
+---
+
+# 📘 1. Visão Geral
+
+O Anime Weather Platform é um **sistema de orquestração front-end** que consome múltiplas APIs e transforma dados externos (clima, humor e gênero) em uma experiência dinâmica e inteligente.
+
+A plataforma demonstra capacidades sólidas em:
+
+- 🌐 Orquestração de APIs  
+- 🎨 Interface adaptativa baseada em estado  
+- 🧠 Lógica multilayer  
+- 🏗️ Arquitetura front-end escalável  
+- ♿ Fundamentos de acessibilidade  
+- 🌍 Pronta para internacionalização  
+- 🤖 Interação contextual com IA  
+
+---
+
+# ⚙️ 2. Funcionalidades Principais
+
+### 🎨 2.1 Interface Adaptativa  
+A interface muda com base no clima atual consumido pela API da OpenWeather.  
+Desenvolvida com **React Global State + CSS Modules**.
+
+### 🧭 2.2 Motor Atmosférico de Recomendação de Animes  
+Uma camada lógica personalizada realiza o mapeamento:
+
+```
+Clima → Humor → Gênero de Anime
+```
+
+Exemplos:  
+- ☀️ Céu Limpo → Slice of Life / Aventura  
+- 🌧️ Chuva → Drama / Mistério  
+- ⛈️ Tempestade → Ação / Psicológico  
+
+Usa a **Jikan API (MyAnimeList)** para sugerir títulos bem avaliados.
+
+### 🤖 2.3 Assistente de Clima com IA  
+Integrado ao **Google Gemini**, permitindo conversas contextualizadas sobre:  
+- Cidade  
+- Clima atual  
+- Humor  
+- Animes recomendados  
+
+### 🎧 2.4 Experiência de Usuário Imersiva  
+- Temas dinâmicos  
+- Glassmorphism  
+- Ambiente opcional de Lofi  
+- Microinterações  
+
+### 🔐 2.5 Autenticação Simulada  
+Fluxo simples (admin/admin) para demonstrar:  
+- Rotas protegidas  
+- Validação de entradas  
+- Lógica de redirecionamento  
+
+---
+
+# 🛠️ 3. Destaques Técnicos
+
+- Arquitetura modular e escalável  
+- Uso eficiente de React Hooks  
+- Lógica em camadas (clima → humor → gênero)  
+- Separação clara de responsabilidades  
+- Componentes puros quando aplicável  
+- CSS Modules para manutenibilidade  
+- Estrutura preparada para i18n  
+
+---
+
+# 📁 4. Estrutura de Pastas
+
+```
+/
+├── src/
+│   ├── components/
+│   │   ├── Weather/
+│   │   ├── AnimeList/
+│   │   ├── Auth/
+│   │   └── Chatbot/
+│   ├── hooks/
+│   ├── styles/
+│   ├── App.jsx
+│   └── main.jsx
+├── public/
+└── package.json
+```
+
+---
+
+# 🧩 5. Stack Tecnológica
+
+- ⚛️ React (Vite)  
+- 🌦️ OpenWeather API  
+- 🎌 Jikan API (MyAnimeList)  
+- 🤖 Google Gemini SDK  
+- 🟨 JavaScript ES6+  
+- 🎨 CSS Modules  
+
+---
+
+# 🚀 6. Como Executar
+
+```bash
+# Clone o repositório
+git clone https://github.com/DevYuriVieira/anime-weather-platform.git
+
+# Entre no diretório
+cd anime-weather-platform
+
+# Instale as dependências
+npm install
+
+# Arquivo de ambiente (.env)
+VITE_WEATHER_KEY=sua_chave_openweather
+VITE_GEMINI_API_KEY=sua_chave_gemini
+
+# Inicie o projeto
+npm run dev
+```
+
+---
+
+# 🧭 7. Roadmap — Próximas Etapas
+
+### 🖥️ 7.1 Back-End (Java + Spring Boot)  
+- Serviço REST de agregação de dados  
+- Autenticação JWT  
+- Endpoint para lógica de IA  
+- Logs e métricas (Spring Actuator)  
+
+### 🗄️ 7.2 Banco de Dados  
+- PostgreSQL  
+- Tabelas de cache para clima/anime  
+- Preferências do usuário  
+- Histórico de conversas com IA (opcional)  
+
+### 📱 7.3 Mobile (React Native)  
+- Compartilhamento de lógica  
+- Suporte offline  
+- Feedback tátil  
+- Componentes reutilizáveis  
+
+### ♿ 7.4 Acessibilidade  
+- Suporte a leitor de tela  
+- Alto contraste  
+- Navegação por teclado  
+- Conformidade WCAG 2.1  
+
+### 🌍 7.5 Internacionalização  
+- Português (pt-BR)  
+- Espanhol (es-ES / es-LA)  
+- Detecção automática via navegador  
+
+### 🚀 7.6 Funcionalidades Extras  
+- Explicação da IA: “Por que esse anime?”  
+- Dashboard global de clima/anime  
+- Notificações baseadas no clima  
+- Integrações OAuth2  
+- Presets de temas  
+
+---
+
+# 🔎 8. SEO — Metatags Recomendadas
+
+```html
+<title>Anime Weather Platform — React, Inteligência Climática & IA</title>
+<meta name="title" content="Anime Weather Platform — React, Inteligência Climática & IA">
+<meta name="description" content="Plataforma moderna que integra clima em tempo real, recomendações de anime, interface dinâmica e IA contextual.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Anime Weather Platform">
+<meta property="og:description" content="Clima + recomendações de anime + experiência adaptativa + IA.">
+<meta property="og:image" content="/sua-imagem.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anime Weather Platform">
+<meta name="twitter:description" content="Uma plataforma completa com clima, animes e IA integrada.">
+<meta name="twitter:image" content="/sua-imagem.png">
+```
+
+---
+
+# 👥 9. Autores
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/yuri-vieira-615131188/">
+        <img src="https://avatars.githubusercontent.com/u/178693356?v=4" width="90px;" /><br/>
+        <b>Yuri Vieira</b>
+      </a><br/>
+      <a href="https://github.com/DevYuriVieira">GitHub</a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/micaela-paes/">
+        <img src="https://avatars.githubusercontent.com/u/180624755?v=4" width="90px;" /><br/>
+        <b>Micaela Paes</b>
+      </a><br/>
+      <a href="https://github.com/MicaelaDinizP">GitHub</a>
+    </td>
+  </tr>
+</table>
+
+---
+
+# 📄 10. Licença
+
+MIT License — livre para usar, modificar e distribuir.
+
+
 
 
