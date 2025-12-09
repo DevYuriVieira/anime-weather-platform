@@ -181,20 +181,19 @@ npm run dev
 
 ## 🔎 8. SEO — Recommended Meta Tags
 
-```html
-<title>Anime Weather Platform — React, Weather Intelligence & AI</title>
-<meta name="title" content="Anime Weather Platform — React, Weather Intelligence & AI">
-<meta name="description" content="A modern platform combining weather data, anime recommendations, dynamic UI themes and AI interaction. Built with clean architecture and global UX.">
+```<title>Anime Weather Platform</title>
+
+<meta name="description" content="Aplicação que combina clima em tempo real com recomendações de anime.">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Anime Weather Platform">
-<meta property="og:description" content="Weather-based anime recommendations with adaptive UX and AI interaction.">
-<meta property="og:image" content="/your-image.png">
+<meta property="og:description" content="Veja o clima da sua região e receba sugestões instantâneas de anime.">
+<meta property="og:image" content="/preview.png">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Anime Weather Platform">
-<meta name="twitter:description" content="A powerful React platform integrating real-time weather, anime intelligence and AI.">
-<meta name="twitter:image" content="/your-image.png">
+<meta name="twitter:description" content="Clima + recomendações de anime, tudo em um só lugar.">
+<meta name="twitter:image" content="/preview.png">
 ```
 
 ---
@@ -397,18 +396,19 @@ npm run dev
 
 # 🔎 8. SEO — Metatags Recomendadas
 
-```html
-<title>Anime Weather Platform — React, Inteligência Climática & IA</title>
-<meta name="title" content="Anime Weather Platform — React, Inteligência Climática & IA">
-<meta name="description" content="Plataforma moderna que integra clima em tempo real, recomendações de anime, interface dinâmica e IA contextual.">
+```<title>Anime Weather Platform</title>
+
+<meta name="description" content="Aplicação que combina clima em tempo real com recomendações de anime.">
+
 <meta property="og:type" content="website">
 <meta property="og:title" content="Anime Weather Platform">
-<meta property="og:description" content="Clima + recomendações de anime + experiência adaptativa + IA.">
-<meta property="og:image" content="/sua-imagem.png">
+<meta property="og:description" content="Veja o clima da sua região e receba sugestões instantâneas de anime.">
+<meta property="og:image" content="/preview.png">
+
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Anime Weather Platform">
-<meta name="twitter:description" content="Uma plataforma completa com clima, animes e IA integrada.">
-<meta name="twitter:image" content="/sua-imagem.png">
+<meta name="twitter:description" content="Clima + recomendações de anime, tudo em um só lugar.">
+<meta name="twitter:image" content="/preview.png">
 ```
 
 ---
