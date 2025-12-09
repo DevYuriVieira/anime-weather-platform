@@ -179,13 +179,13 @@ npm run dev
 
 ---
 
-## 🔎 8. SEO — Recommended Meta Tags
+### 🔎 8. SEO — Recommended Meta Tags
 
 Here are the main meta tags used in this project, the same ones modern websites use to work well in search engines and on social media:
 
-- **Basic**: <title>, <meta charset>, <meta name="viewport">, <link rel="icon">
-- **SEO**: <meta name="description">, <meta name="author">
-- **Social / Open Graph**: <meta property="og:title">, <meta property="og:description">, <meta property="og:image">
+- **Basic**: `<title>`, `<meta charset>`, `<meta name="viewport">`, `<link rel="icon">`
+- **SEO**: `<meta name="description">`, `<meta name="author">`
+- **Social / Open Graph**: `<meta property="og:title">`, `<meta property="og:description">`, `<meta property="og:image">`
 - **Fonts**: Google Fonts import for Roboto
 
 These tags help the site display correctly in browsers, look good in search results and social shares, and make the user experience smoother.
@@ -388,16 +388,17 @@ npm run dev
 
 ---
 
-# 🔎 8. SEO — Metatags Recomendadas
+### 🔎 8. SEO — Metatags Recomendadas
 
 Aqui estão as principais meta tags que usamos no projeto, as mesmas que sites modernos usam para funcionar bem em buscadores e redes sociais:
 
-- **Básicas**: <title>, <meta charset>, <meta name="viewport">, <link rel="icon">
-- **SEO**: <meta name="description">, <meta name="author">
-- **Redes sociais / Open Graph**: <meta property="og:title">, <meta property="og:description">, <meta property="og:image">
+- **Básicas**: `<title>`, `<meta charset>`, `<meta name="viewport">`, `<link rel="icon">`
+- **SEO**: `<meta name="description">`, `<meta name="author">`
+- **Redes sociais / Open Graph**: `<meta property="og:title">`, `<meta property="og:description">`, `<meta property="og:image">`
 - **Fonte**: importação do Google Fonts para Roboto
 
 Essas tags ajudam o site a ser exibido corretamente no navegador, aparecer bem em pesquisas e redes sociais, e deixar a experiência mais agradável para o usuário.
+
 
 ---
 
