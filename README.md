@@ -181,20 +181,14 @@ npm run dev
 
 ## 🔎 8. SEO — Recommended Meta Tags
 
-```<title>Anime Weather Platform</title>
+Here are the main meta tags used in this project, the same ones modern websites use to work well in search engines and on social media:
 
-<meta name="description" content="Aplicação que combina clima em tempo real com recomendações de anime.">
+- **Basic**: <title>, <meta charset>, <meta name="viewport">, <link rel="icon">
+- **SEO**: <meta name="description">, <meta name="author">
+- **Social / Open Graph**: <meta property="og:title">, <meta property="og:description">, <meta property="og:image">
+- **Fonts**: Google Fonts import for Roboto
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Anime Weather Platform">
-<meta property="og:description" content="Veja o clima da sua região e receba sugestões instantâneas de anime.">
-<meta property="og:image" content="/preview.png">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Anime Weather Platform">
-<meta name="twitter:description" content="Clima + recomendações de anime, tudo em um só lugar.">
-<meta name="twitter:image" content="/preview.png">
-```
+These tags help the site display correctly in browsers, look good in search results and social shares, and make the user experience smoother.
 
 ---
 
@@ -396,20 +390,14 @@ npm run dev
 
 # 🔎 8. SEO — Metatags Recomendadas
 
-```<title>Anime Weather Platform</title>
+Aqui estão as principais meta tags que usamos no projeto, as mesmas que sites modernos usam para funcionar bem em buscadores e redes sociais:
 
-<meta name="description" content="Aplicação que combina clima em tempo real com recomendações de anime.">
+- **Básicas**: <title>, <meta charset>, <meta name="viewport">, <link rel="icon">
+- **SEO**: <meta name="description">, <meta name="author">
+- **Redes sociais / Open Graph**: <meta property="og:title">, <meta property="og:description">, <meta property="og:image">
+- **Fonte**: importação do Google Fonts para Roboto
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Anime Weather Platform">
-<meta property="og:description" content="Veja o clima da sua região e receba sugestões instantâneas de anime.">
-<meta property="og:image" content="/preview.png">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Anime Weather Platform">
-<meta name="twitter:description" content="Clima + recomendações de anime, tudo em um só lugar.">
-<meta name="twitter:image" content="/preview.png">
-```
+Essas tags ajudam o site a ser exibido corretamente no navegador, aparecer bem em pesquisas e redes sociais, e deixar a experiência mais agradável para o usuário.
 
 ---
 
@@ -439,7 +427,4 @@ npm run dev
 # 📄 10. Licença
 
 MIT License — livre para usar, modificar e distribuir.
-
-
-
 
